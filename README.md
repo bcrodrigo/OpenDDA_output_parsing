@@ -1,5 +1,3 @@
-# OpenDDA_output_parsing
-
 # Description
 Repository containing Python scripts for post-processing the simulation outputs of OpenDDA. These scripts rely on the NumPy, Pandas, and Matplotlib libraries as indicated on each script.
 
@@ -29,5 +27,5 @@ The files and intended workflow are as follows:
 
 5. `plot_ellipse_parameters.py`
 
-- Plots Amplitude, Degree of polarization, ellipticity and azimuth for a given incident polarization state
+- Plots Amplitude, Degree of polarization, ellipticity and azimuth for a given incident polarization state, from the npz file generated with `calculate_pol_ellipse_parameters.py`
 - The plots are saved as png and svg files
