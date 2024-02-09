@@ -1,5 +1,13 @@
 # Description
-Repository containing Python scripts for post-processing the simulation outputs of OpenDDA. These scripts rely on the NumPy, Pandas, and Matplotlib libraries as indicated on each script.
+Repository containing Python scripts for post-processing the simulation outputs of OpenDDA for scattering calculations of single particles. These scripts rely on the NumPy, Pandas, and Matplotlib libraries as indicated on each script.
+
+# Background
+
+A typical simulation from OpenDDA would output a csv file with about 1 million rows, as each simulation calculated a 2-by-2 complex-valued Matrix for ~ 18 incident wavelengths, 20 orientations, and 181 observation directions.
+
+The 2-by-2 complex-valued matrices relate the incident and scattered components of the electric field. Since these components are generally challenging to measure, the complex-valued matrices were mapped to a 4-by-4 real-valued matrix, known as the Mueller Matrix (MM). The MM relates the incident and scattered polarization states, and allows you to validate if the simulation outputs are correct by looking at the number of non-zero elements and symmetries. One advantage of this representation is that you can represent any polarization state, from fully polarized to completely unpolarized. The elements of the MM can be measured experimentally.
+
+Finally, the scattering response of an ensemble of randomly oriented particles can be calculated using an average over multiple single-particle orientations. This is achieved by averaging the elements of the MM for all the calculated orientations.
 
 # Usage
 
